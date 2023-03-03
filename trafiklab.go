@@ -2,12 +2,14 @@ package trafiklab
 
 import (
 	"io"
+	"log"
 	"net/http"
 	"net/url"
 	"os"
 )
 
 func SetSLRealtimeDeparturesV4Key(key string) {
+	log.Println("SetSLRealtimeDeparturesV4Key", key)
 	os.Setenv("SL_REAL_TIME_DEPARTURES_V4", key)
 }
 
@@ -28,6 +30,7 @@ func get(url string) (string, error) {
 
 func GetSLRealtimeDeparturesV4(query url.Values) (string, error) {
 	query.Set("key", os.Getenv("SL_REAL_TIME_DEPARTURES_V4"))
+	log.Println("GetSLRealtimeDeparturesV4", os.Getenv("SL_REAL_TIME_DEPARTURES_V4"))
 	u, _ := url.Parse("https://api.sl.se/api2/realtimedeparturesV4.json")
 	u.RawQuery = query.Encode()
 	return get(u.String())
