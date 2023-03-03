@@ -7,6 +7,10 @@ import (
 	"os"
 )
 
+func SetSLRealtimeDeparturesV4Key(key string) {
+	os.Setenv("SL_REAL_TIME_DEPARTURES_V4", key)
+}
+
 func get(url string) (string, error) {
 	res, err := http.Get(url)
 	if err != nil {
