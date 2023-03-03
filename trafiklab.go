@@ -1,6 +1,7 @@
 package trafiklab
 
 import (
+	"log"
 	"net/http"
 	"net/url"
 	"os"
@@ -11,4 +12,8 @@ func GetSLRealtimeDeparturesV4(query url.Values) (*http.Response, error) {
 	u, _ := url.Parse("https://api.sl.se/api2/realtimedeparturesV4.json")
 	u.RawQuery = query.Encode()
 	return http.Get(u.String())
+}
+
+func Hello() {
+	log.Print("Hello World")
 }
