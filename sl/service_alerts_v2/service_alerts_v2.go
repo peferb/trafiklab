@@ -12,8 +12,8 @@ import (
 	"net/url"
 )
 
-const ApiUrlJson = "https://api.sl.se/api2/realtimedeparturesV4.json"
-const ApiUrlXML = "https://api.sl.se/api2/realtimedeparturesV4.xml"
+const ApiUrlJson = "https://api.sl.se/api2/deviations.json"
+const ApiUrlXML = "https://api.sl.se/api2/deviations.xml"
 
 // GetBytes JSON
 func GetBytes(apiKey string, query url.Values) ([]byte, error) {
