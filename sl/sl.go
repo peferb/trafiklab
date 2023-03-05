@@ -6,12 +6,16 @@ import (
 	"net/url"
 )
 
-func GetBytes(apiUrl string, query url.Values, key string) ([]byte, error) {
-	query.Set("key", key)
+func GetResponse(aipKey string, query url.Values, apiUrl string) (*http.Response, error) {
+	query.Set("key", aipKey)
 	u, _ := url.Parse(apiUrl)
 	u.RawQuery = query.Encode()
 
-	res, err := http.Get(u.String())
+	return http.Get(u.String())
+}
+
+func GetBytes(aipKey string, query url.Values, apiUrl string) ([]byte, error) {
+	res, err := GetResponse(aipKey, query, apiUrl)
 	if err != nil {
 		return nil, err
 	}

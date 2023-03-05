@@ -4,14 +4,13 @@ import (
 	"encoding/json"
 	. "github.com/peferb/trafiklab/sl"
 	"net/url"
-	"os"
 )
 
-func Get(query url.Values, response *Response) error {
+func Get(aipKey string, query url.Values, response *Response) error {
 	bytes, err := GetBytes(
-		"https://api.sl.se/api2/realtimedeparturesV4.json",
+		aipKey,
 		query,
-		os.Getenv("SL_REAL_TIME_DEPARTURES_V4"),
+		"https://api.sl.se/api2/realtimedeparturesV4.json",
 	)
 	if err != nil {
 		return err
@@ -19,11 +18,11 @@ func Get(query url.Values, response *Response) error {
 	return json.Unmarshal(bytes, &response)
 }
 
-func GetJson(query url.Values) (string, error) {
+func GetJson(aipKey string, query url.Values) (string, error) {
 	bytes, err := GetBytes(
-		"https://api.sl.se/api2/realtimedeparturesV4.json",
+		aipKey,
 		query,
-		os.Getenv("SL_REAL_TIME_DEPARTURES_V4"),
+		"https://api.sl.se/api2/realtimedeparturesV4.json",
 	)
 	if err != nil {
 		return "", err
@@ -31,11 +30,11 @@ func GetJson(query url.Values) (string, error) {
 	return string(bytes), nil
 }
 
-func GetXml(query url.Values) (string, error) {
+func GetXml(aipKey string, query url.Values) (string, error) {
 	bytes, err := GetBytes(
-		"https://api.sl.se/api2/realtimedeparturesV4.xml",
+		aipKey,
 		query,
-		os.Getenv("SL_REAL_TIME_DEPARTURES_V4"),
+		"https://api.sl.se/api2/realtimedeparturesV4.xml",
 	)
 	if err != nil {
 		return "", err
