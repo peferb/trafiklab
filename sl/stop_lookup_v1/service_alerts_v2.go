@@ -20,7 +20,7 @@ func GetBytes(apiKey string, query url.Values) ([]byte, error) {
 	return sl.GetBytes(apiKey, query, ApiUrlJson)
 }
 
-// TODO Struct setter
+// TODO Struct getter
 // TODO Response struct
 
 func GetJson(apiKey string, query url.Values) (string, error) {
