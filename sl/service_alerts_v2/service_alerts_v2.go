@@ -1,11 +1,11 @@
-// Package realtime_departures_v4 "SL Service alerts v2.0 AKA Deviations (Störningsinformation 2)"
+// Package service_alerts_v2 "SL Service alerts v2.0 AKA Deviations (Störningsinformation 2)"
 //
 // Access
 // https://developer.trafiklab.se/api/sl-storningsinformation-2
 //
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/service-alerts-2/
-package realtime_departures_v4
+package service_alerts_v2
 
 import (
 	sl "github.com/peferb/trafiklab/sl"
