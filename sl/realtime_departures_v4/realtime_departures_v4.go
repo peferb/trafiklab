@@ -6,11 +6,20 @@ import (
 	"net/url"
 )
 
+// ApiUrl "Realtime Departures V4 (Realtidsinformation 4)"
+//
+// Access
+// https://developer.trafiklab.se/api/sl-realtidsinformation-4
+//
+// Documentation
+// https://www.trafiklab.se/api/trafiklab-apis/sl/departures-4/
+const ApiUrl = "https://api.sl.se/api2/realtimedeparturesV4.json"
+
 func Get(aipKey string, query url.Values, response *Response) error {
 	bytes, err := GetBytes(
 		aipKey,
 		query,
-		"https://api.sl.se/api2/realtimedeparturesV4.json",
+		ApiUrl,
 	)
 	if err != nil {
 		return err
@@ -22,7 +31,7 @@ func GetJson(aipKey string, query url.Values) (string, error) {
 	bytes, err := GetBytes(
 		aipKey,
 		query,
-		"https://api.sl.se/api2/realtimedeparturesV4.json",
+		ApiUrl,
 	)
 	if err != nil {
 		return "", err
@@ -34,7 +43,7 @@ func GetXml(aipKey string, query url.Values) (string, error) {
 	bytes, err := GetBytes(
 		aipKey,
 		query,
-		"https://api.sl.se/api2/realtimedeparturesV4.xml",
+		ApiUrl,
 	)
 	if err != nil {
 		return "", err
