@@ -1,3 +1,10 @@
+// Package realtime_departures_v4 "Realtime Departures V4 (Realtidsinformation 4)"
+//
+// Access
+// https://developer.trafiklab.se/api/sl-realtidsinformation-4
+//
+// Documentation
+// https://www.trafiklab.se/api/trafiklab-apis/sl/departures-4/
 package realtime_departures_v4
 
 import (
@@ -6,13 +13,6 @@ import (
 	"net/url"
 )
 
-// ApiUrlJson "Realtime Departures V4 (Realtidsinformation 4)"
-//
-// Access
-// https://developer.trafiklab.se/api/sl-realtidsinformation-4
-//
-// Documentation
-// https://www.trafiklab.se/api/trafiklab-apis/sl/departures-4/
 const ApiUrlJson = "https://api.sl.se/api2/realtimedeparturesV4.json"
 const ApiUrlXml = "https://api.sl.se/api2/realtimedeparturesV4.xml"
 
