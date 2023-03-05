@@ -2,7 +2,7 @@ package realtime_departures_v4
 
 import (
 	"encoding/json"
-	. "github.com/peferb/trafiklab/sl"
+	sl "github.com/peferb/trafiklab/sl"
 	"net/url"
 )
 
@@ -15,9 +15,13 @@ import (
 // https://www.trafiklab.se/api/trafiklab-apis/sl/departures-4/
 const ApiUrl = "https://api.sl.se/api2/realtimedeparturesV4.json"
 
-func Get(aipKey string, query url.Values, response *Response) error {
-	bytes, err := GetBytes(
-		aipKey,
+func GetBytes(apiKey string, query url.Values) ([]byte, error) {
+	return sl.GetBytes(apiKey, query, ApiUrl)
+}
+
+func Get(apiKey string, query url.Values, response *Response) error {
+	bytes, err := sl.GetBytes(
+		apiKey,
 		query,
 		ApiUrl,
 	)
@@ -27,9 +31,9 @@ func Get(aipKey string, query url.Values, response *Response) error {
 	return json.Unmarshal(bytes, &response)
 }
 
-func GetJson(aipKey string, query url.Values) (string, error) {
-	bytes, err := GetBytes(
-		aipKey,
+func GetJson(apiKey string, query url.Values) (string, error) {
+	bytes, err := sl.GetBytes(
+		apiKey,
 		query,
 		ApiUrl,
 	)
@@ -39,9 +43,9 @@ func GetJson(aipKey string, query url.Values) (string, error) {
 	return string(bytes), nil
 }
 
-func GetXml(aipKey string, query url.Values) (string, error) {
-	bytes, err := GetBytes(
-		aipKey,
+func GetXml(apiKey string, query url.Values) (string, error) {
+	bytes, err := sl.GetBytes(
+		apiKey,
 		query,
 		ApiUrl,
 	)
