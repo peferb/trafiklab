@@ -16,9 +16,12 @@ import (
 const ApiUrlJson = "https://api.sl.se/api2/realtimedeparturesV4.json"
 const ApiUrlXml = "https://api.sl.se/api2/realtimedeparturesV4.xml"
 
-// GetBytes JSON
-func GetBytes(apiKey string, query url.Values) ([]byte, error) {
+func GetBytesJson(apiKey string, query url.Values) ([]byte, error) {
 	return sl.GetBytes(apiKey, query, ApiUrlJson)
+}
+
+func GetBytesXml(apiKey string, query url.Values) ([]byte, error) {
+	return sl.GetBytes(apiKey, query, ApiUrlXml)
 }
 
 func Get(apiKey string, query url.Values, response *Response) error {

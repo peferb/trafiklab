@@ -13,11 +13,14 @@ import (
 )
 
 const ApiUrlJson = "https://api.sl.se/api2/trafficsituation.json"
-const ApiUrlXML = "https://api.sl.se/api2/trafficsituation.xml"
+const ApiUrlXml = "https://api.sl.se/api2/trafficsituation.xml"
 
-// GetBytes JSON
-func GetBytes(apiKey string, query url.Values) ([]byte, error) {
+func GetBytesJson(apiKey string, query url.Values) ([]byte, error) {
 	return sl.GetBytes(apiKey, query, ApiUrlJson)
+}
+
+func GetBytesXml(apiKey string, query url.Values) ([]byte, error) {
+	return sl.GetBytes(apiKey, query, ApiUrlXml)
 }
 
 // TODO Struct getter
@@ -39,7 +42,7 @@ func GetXml(apiKey string, query url.Values) (string, error) {
 	bytes, err := sl.GetBytes(
 		apiKey,
 		query,
-		ApiUrlXML,
+		ApiUrlXml,
 	)
 	if err != nil {
 		return "", err
