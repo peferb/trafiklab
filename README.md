@@ -8,7 +8,7 @@ easy to use.
 
 **GO GET IT!**
 ```shell 
-$ go get github.com/peferb/trafiklab@v0.0.8
+$ go get github.com/peferb/trafiklab@v0.1.0
 ```
 
 ## Simple server example
