@@ -1,5 +1,5 @@
 # peferb/trafiklab 
-#### _github.com/peferb/trafiklab@v0.1.0_
+#### _github.com/peferb/trafiklab@v0.2.1_
 
 Golang wrapper of [Trafiklab.se](https://trafiklab.se/) which supplies traffic information about Swedish trains, buses, trams and ships.
 
@@ -8,27 +8,57 @@ easy to use.
 
 **GO GET IT!**
 ```shell 
-$ go get github.com/peferb/trafiklab@v0.1.0
+$ go get github.com/peferb/trafiklab@v0.2.1
 ```
 
-## Simple server example
+## CLI example
+
 ```go
 package main
 
 import (
-	realtime "github.com/peferb/trafiklab/sl/realtime_departures_v4"
+	"bytes"
+	"encoding/json"
+	"github.com/peferb/trafiklab/sl"
+	. "github.com/peferb/trafiklab/sl/api"
+	"log"
+	"net/url"
+	"os"
+)
+
+
+func main() {
+	departuresApi := sl.NewApi(RealTimeDeparturesV4, JSON, "you api key here")
+	departures, err := departuresApi.GetBytes(url.Values{"siteid": {os.Args[1]}})
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	prettyJson := &bytes.Buffer{}
+	err = json.Indent(prettyJson, departures, "", "  ")
+	log.Println(prettyJson.String(), err)
+	// Example run:
+	// $ go run . 9710
+}
+```
+
+
+## Server example
+```go
+package main
+
+import (
+	"github.com/peferb/trafiklab/sl"
+	. "github.com/peferb/trafiklab/sl/api"
 	"log"
 	"net/http"
 )
 
 func departuresHandler(w http.ResponseWriter, req *http.Request) {
-	bytes, err := realtime.GetBytesJson("your api key here", req.URL.Query())
+	departuresApi := sl.NewApi(RealTimeDeparturesV4, JSON, "your api key here")
 	
-	// Or as XML/string:
-	// realtime.GetBytesXml("your api key here", req.URL.Query())
-	// realtime.GetJson("your api key here", req.URL.Query())
-	// realtime.GetXml("your api key here", req.URL.Query())
-	
+	bytes, err := departuresApi.GetBytes(req.URL.Query())
 	if err != nil {
 		w.WriteHeader(500)
 		w.Write([]byte(err.Error()))
@@ -44,10 +74,8 @@ func main() {
 	http.HandleFunc("/realtime-departures", departuresHandler)
 	log.Println("Listening for requests at http://localhost:8000/")
 	log.Fatal(http.ListenAndServe(":8000", nil))
-	
-	// Example visit: 
-	// http://localhost:8000/realtime-departures?siteid=9710
-	// See specification links below for more params and packages
+	// Example url: 
+	//localhost:8000/realtime-departures?siteid=9710
 }
 ```
 
