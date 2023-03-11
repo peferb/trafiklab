@@ -83,27 +83,30 @@ func main() {
 
 * Sign up at [trafiklab.se](https://trafiklab.se)
 * Generate keys
-* Import wanted API from below
 
 ### SL Departures v4.0 (Realtidsinformation 4)
-Package: github.com/peferb/trafiklab/sl/realtime_departures_v4
 * [Generate API key](https://developer.trafiklab.se/api/sl-realtidsinformation-4)
 * [API Specification](https://www.trafiklab.se/api/trafiklab-apis/sl/departures-4/)
 
 ### SL Service alerts v2.0 AKA Deviations (Störningsinformation 2)
-Package: github.com/peferb/trafiklab/sl/service_alerts_v2
 * [Generate API key](https://developer.trafiklab.se/api/sl-storningsinformation-2)
 * [API Specification](https://www.trafiklab.se/api/trafiklab-apis/sl/service-alerts-2/)
 
 ### SL Stop lookup v1.0 AKA TypeAhead (Platsuppslag)
-Package: github.com/peferb/trafiklab/sl/stop_lookup_v1
 * [Generate API key](https://developer.trafiklab.se/api/sl-platsuppslag)
 * [API Specification](https://www.trafiklab.se/api/trafiklab-apis/sl/stop-lookup/)
 
 ### SL Traffic status v2.0 AKA Traffic Situation (SL Trafikläget 2) 
-Package: github.com/peferb/trafiklab/sl/traffic_status_v2
 * [Generate API key](https://developer.trafiklab.se/api/sl-trafiklaget-2)
 * [API Specification](https://www.trafiklab.se/api/trafiklab-apis/sl/sl-traffic-status-2/)
+
+### SL Stops and lines v2.0 AKA LineData (SL Hållplatser och Linjer 2)
+* [Generate API key](https://developer.trafiklab.se/api/sl-hallplatser-och-linjer-2)
+* [API Specification](https://www.trafiklab.se/api/trafiklab-apis/sl/stops-and-lines-2/)
+
+### SL Nearby stops v2.0 (Närliggande hållplatser 2)
+* [Generate API key](https://developer.trafiklab.se/api/sl-narliggande-hallplatser-2)
+* [API Specification](https://www.trafiklab.se/api/trafiklab-apis/sl/nearby-stops-2/)
 
 ## TODO
 _Nothing to see here ;)_
