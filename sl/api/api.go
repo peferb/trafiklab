@@ -57,3 +57,12 @@ const StopLookupV1 Type = "https://api.sl.se/api2/typeahead"
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/sl-traffic-status-2/
 const TrafficStatusV2 Type = "https://api.sl.se/api2/trafficsituation"
+
+// StopsAndLinesV2 "SL Stops and lines v2.0 AKA LineData (SL Hållplatser och Linjer 2)"
+//
+// Access
+// https://developer.trafiklab.se/api/sl-hallplatser-och-linjer-2
+//
+// Documentation
+// https://www.trafiklab.se/api/trafiklab-apis/sl/stops-and-lines-2/
+const StopsAndLinesV2 Type = "https://api.sl.se/api2/LineData"

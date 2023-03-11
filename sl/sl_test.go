@@ -238,3 +238,43 @@ func TestTrafficStatusV2ResponseXml(t *testing.T) {
 	apiParams := url.Values{}
 	testStatusCode("TrafficStatusV2ResponseXml", t, "SL_TRAFFIC_STATUS_V2", TrafficStatusV2, XML, apiParams, "response", statusSuccessXml)
 }
+
+/*
+ * StopsAndLinesV2
+ */
+
+// TestStopsAndLinesV2StringJson tries to fetch data from StopsAndLinesV2 API
+func TestStopsAndLinesV2StringJson(t *testing.T) {
+	apiParams := url.Values{"model": {"Transportmode"}}
+	testStatusCode("StopsAndLinesV2StringJson", t, "SL_STOPS_AND_LINES_V2", StopsAndLinesV2, JSON, apiParams, "string", statusSuccessJson)
+}
+
+// TestStopsAndLinesV2StringXml tries to fetch data from StopsAndLinesV2 API
+func TestStopsAndLinesV2StringXml(t *testing.T) {
+	apiParams := url.Values{"model": {"Transportmode"}}
+	testStatusCode("StopsAndLinesV2StringXml", t, "SL_STOPS_AND_LINES_V2", StopsAndLinesV2, XML, apiParams, "string", statusSuccessXml)
+}
+
+// TestStopsAndLinesV2BytesJson tries to fetch data from StopsAndLinesV2 API
+func TestStopsAndLinesV2BytesJson(t *testing.T) {
+	apiParams := url.Values{"model": {"Transportmode"}}
+	testStatusCode("StopsAndLinesV2BytesJson", t, "SL_STOPS_AND_LINES_V2", StopsAndLinesV2, JSON, apiParams, "bytes", statusSuccessJson)
+}
+
+// TestStopsAndLinesV2BytesXml tries to fetch data from StopsAndLinesV2 API
+func TestStopsAndLinesV2BytesXml(t *testing.T) {
+	apiParams := url.Values{"model": {"Transportmode"}}
+	testStatusCode("StopsAndLinesV2BytesXml", t, "SL_STOPS_AND_LINES_V2", StopsAndLinesV2, XML, apiParams, "bytes", statusSuccessXml)
+}
+
+// TestStopsAndLinesV2ResponseJson tries to fetch data from StopsAndLinesV2 API
+func TestStopsAndLinesV2ResponseJson(t *testing.T) {
+	apiParams := url.Values{"model": {"Transportmode"}}
+	testStatusCode("StopsAndLinesV2ResponseJson", t, "SL_STOPS_AND_LINES_V2", StopsAndLinesV2, JSON, apiParams, "response", statusSuccessJson)
+}
+
+// TestStopsAndLinesV2ResponseXml tries to fetch data from StopsAndLinesV2 API
+func TestStopsAndLinesV2ResponseXml(t *testing.T) {
+	apiParams := url.Values{"model": {"Transportmode"}}
+	testStatusCode("StopsAndLinesV2ResponseXml", t, "SL_STOPS_AND_LINES_V2", StopsAndLinesV2, XML, apiParams, "response", statusSuccessXml)
+}
