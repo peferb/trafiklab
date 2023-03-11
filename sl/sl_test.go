@@ -120,7 +120,7 @@ func TestRealTimeDeparturesV4ResponseXml(t *testing.T) {
 }
 
 /*
- * ServiceAlertsV2
+* ServiceAlertsV2
  */
 
 // TestServiceAlertsV2StringJson tries to fetch data from ServiceAlertsV2 API
@@ -160,7 +160,7 @@ func TestServiceAlertsV2ResponseXml(t *testing.T) {
 }
 
 /*
- * StopLookupV1
+* StopLookupV1
  */
 
 // TestStopLookupV1StringJson tries to fetch data from StopLookupV1 API
@@ -200,7 +200,7 @@ func TestStopLookupV1ResponseXml(t *testing.T) {
 }
 
 /*
- * TrafficStatusV2
+* TrafficStatusV2
  */
 
 // TestTrafficStatusV2StringJson tries to fetch data from TrafficStatusV2 API
@@ -240,7 +240,7 @@ func TestTrafficStatusV2ResponseXml(t *testing.T) {
 }
 
 /*
- * StopsAndLinesV2
+* StopsAndLinesV2
  */
 
 // TestStopsAndLinesV2StringJson tries to fetch data from StopsAndLinesV2 API
@@ -277,4 +277,44 @@ func TestStopsAndLinesV2ResponseJson(t *testing.T) {
 func TestStopsAndLinesV2ResponseXml(t *testing.T) {
 	apiParams := url.Values{"model": {"Transportmode"}}
 	testStatusCode("StopsAndLinesV2ResponseXml", t, "SL_STOPS_AND_LINES_V2", StopsAndLinesV2, XML, apiParams, "response", statusSuccessXml)
+}
+
+/*
+ * NearbyStopsV2
+ */
+
+// TestNearbyStopsV2StringJson tries to fetch data from NearbyStopsV2 API
+func TestNearbyStopsV2StringJson(t *testing.T) {
+	apiParams := url.Values{"originCoordLat": {"59.329323"}, "originCoordLong": {"18.068581"}}
+	testStatusCode("NearbyStopsV2StringJson", t, "SL_NEARBY_STOPS_V2", NearbyStopsV2, JSON, apiParams, "string", "stopLocationOrCoordLocation")
+}
+
+// TestNearbyStopsV2StringXml tries to fetch data from NearbyStopsV2 API
+func TestNearbyStopsV2StringXml(t *testing.T) {
+	apiParams := url.Values{"originCoordLat": {"59.329323"}, "originCoordLong": {"18.068581"}}
+	testStatusCode("NearbyStopsV2StringXml", t, "SL_NEARBY_STOPS_V2", NearbyStopsV2, XML, apiParams, "string", "<StopLocation id=")
+}
+
+// TestNearbyStopsV2BytesJson tries to fetch data from NearbyStopsV2 API
+func TestNearbyStopsV2BytesJson(t *testing.T) {
+	apiParams := url.Values{"originCoordLat": {"59.329323"}, "originCoordLong": {"18.068581"}}
+	testStatusCode("NearbyStopsV2BytesJson", t, "SL_NEARBY_STOPS_V2", NearbyStopsV2, JSON, apiParams, "bytes", "stopLocationOrCoordLocation")
+}
+
+// TestNearbyStopsV2BytesXml tries to fetch data from NearbyStopsV2 API
+func TestNearbyStopsV2BytesXml(t *testing.T) {
+	apiParams := url.Values{"originCoordLat": {"59.329323"}, "originCoordLong": {"18.068581"}}
+	testStatusCode("NearbyStopsV2BytesXml", t, "SL_NEARBY_STOPS_V2", NearbyStopsV2, XML, apiParams, "bytes", "<StopLocation id=")
+}
+
+// TestNearbyStopsV2ResponseJson tries to fetch data from NearbyStopsV2 API
+func TestNearbyStopsV2ResponseJson(t *testing.T) {
+	apiParams := url.Values{"originCoordLat": {"59.329323"}, "originCoordLong": {"18.068581"}}
+	testStatusCode("NearbyStopsV2ResponseJson", t, "SL_NEARBY_STOPS_V2", NearbyStopsV2, JSON, apiParams, "response", "stopLocationOrCoordLocation")
+}
+
+// TestNearbyStopsV2ResponseXml tries to fetch data from NearbyStopsV2 API
+func TestNearbyStopsV2ResponseXml(t *testing.T) {
+	apiParams := url.Values{"originCoordLat": {"59.329323"}, "originCoordLong": {"18.068581"}}
+	testStatusCode("NearbyStopsV2ResponseXml", t, "SL_NEARBY_STOPS_V2", NearbyStopsV2, XML, apiParams, "response", "<StopLocation id=")
 }
