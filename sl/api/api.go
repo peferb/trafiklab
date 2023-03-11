@@ -31,7 +31,7 @@ type Type string
 // https://www.trafiklab.se/api/trafiklab-apis/sl/departures-4/
 const RealTimeDeparturesV4 Type = "https://api.sl.se/api2/realtimedeparturesV4"
 
-// ServiceAlertsV2 "SL Stop lookup v1.0 AKA TypeAhead (Platsuppslag)"
+// ServiceAlertsV2 "SL Stop lookup v1.0 AKA deviations (Platsuppslag)"
 //
 // Access
 // https://developer.trafiklab.se/api/sl-platsuppslag
