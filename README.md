@@ -108,5 +108,6 @@ func main() {
 
 ## TODO
 _Nothing to see here ;)_
+* Move protocol (https) from API Type url:s to formatter
 * Add support for "SL Route-planner v3.1" in its own package (because it breaks overall structure)
 * Option to get data as structs 
