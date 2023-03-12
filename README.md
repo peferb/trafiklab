@@ -26,7 +26,6 @@ import (
 	"os"
 )
 
-
 func main() {
 	departuresApi := sl.NewApi(RealTimeDeparturesV4, JSON, "you api key here")
 	departures, err := departuresApi.GetBytes(url.Values{"siteid": {os.Args[1]}})
