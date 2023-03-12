@@ -73,7 +73,7 @@ func main() {
 	log.Println("Listening for requests at http://localhost:8000/")
 	log.Fatal(http.ListenAndServe(":8000", nil))
 	// Example url: 
-	//localhost:8000/realtime-departures?siteid=9710
+	// localhost:8000/realtime-departures?siteid=9710
 }
 ```
 
