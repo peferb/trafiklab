@@ -26,6 +26,17 @@ const XML = "xml"
 // https://www.trafiklab.se/api/trafiklab-apis/sl/route-planner-31/
 const RoutePlannerV3_1Trip = "api.sl.se/api2/TravelplannerV3_1/trip"
 
+// RoutePlannerV3_1GisRoute Gis Route part of "Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
+//
+// Access
+// https://developer.trafiklab.se/api/sl-reseplanerare-31
+//
+// Documentation
+// https://www.trafiklab.se/api/trafiklab-apis/sl/route-planner-31/
+const RoutePlannerV3_1GisRoute = "api.sl.se/api2/TravelplannerV3_1/gisroute"
+
+// http://api.sl.se/api2/TravelplannerV3_1/gisroute.&lt;FORMAT&gt;?key=&lt;DIN APINYCKEL&gt;&amp;ctx=
+
 // RoutePlannerV3_1JourneyDetail Journey Detail part of"Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
 //
 // Access

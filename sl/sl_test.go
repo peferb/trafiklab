@@ -80,6 +80,46 @@ func testStatusCode(testName string, t *testing.T, envVar string, api string, fo
 }
 
 /*
+ * Route-planner v3.1 Gis Route
+ */
+
+// TestRoutePlannerV3_1GisRouteStringJson tries to fetch  Gis Route data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1GisRouteStringJson(t *testing.T) {
+	apiParams := url.Values{"ploy": {"1"}, "lang": {"sv"}, "ctx": {"G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C}"}}
+	testStatusCode("TestRoutePlannerV3_1GisRouteStringJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1GisRoute, JSON, apiParams, "string", `"GisRoute":`)
+}
+
+// TestRoutePlannerV3_1GisRouteStringXml tries to fetch  Gis Route data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1GisRouteStringXml(t *testing.T) {
+	apiParams := url.Values{"ploy": {"1"}, "lang": {"sv"}, "ctx": {"G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C}"}}
+	testStatusCode("TestRoutePlannerV3_1GisRouteStringXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1GisRoute, XML, apiParams, "string", `<GisRoute`)
+}
+
+// TestRoutePlannerV3_1GisRouteBytesJson tries to fetch  Gis Route data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1GisRouteBytesJson(t *testing.T) {
+	apiParams := url.Values{"ploy": {"1"}, "lang": {"sv"}, "ctx": {"G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C}"}}
+	testStatusCode("TestRoutePlannerV3_1GisRouteBytesJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1GisRoute, JSON, apiParams, "bytes", `"GisRoute":`)
+}
+
+// TestRoutePlannerV3_1GisRouteBytesXml tries to fetch data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1GisRouteBytesXml(t *testing.T) {
+	apiParams := url.Values{"ploy": {"1"}, "lang": {"sv"}, "ctx": {"G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C}"}}
+	testStatusCode("TestRoutePlannerV3_1GisRouteBytesXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1GisRoute, XML, apiParams, "bytes", `<GisRoute`)
+}
+
+// TestRoutePlannerV3_1GisRouteResponseJson tries to fetch data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1GisRouteResponseJson(t *testing.T) {
+	apiParams := url.Values{"ploy": {"1"}, "lang": {"sv"}, "ctx": {"G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C}"}}
+	testStatusCode("TestRoutePlannerV3_1GisRouteResponseJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1GisRoute, JSON, apiParams, "response", `"GisRoute":`)
+}
+
+// TestRoutePlannerV3_1GisRouteResponseXml tries to fetch data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1GisRouteResponseXml(t *testing.T) {
+	apiParams := url.Values{"ploy": {"1"}, "lang": {"sv"}, "ctx": {"G|1|G@F|A=1@O=Stockholm%20City@X=18059500@Y=59331143@U=74@L=400105313@|A=2@O=Stockholm,%20Drottninggatan%2022@l=@X=18065001@Y=59330415@u=0@|12022019|84500|85100|ft|ft@0@1000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7bt@0@2000@120@-1@100@1@1000@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7tt@0@5000@120@-1@100@1@2500@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$%C2%A7%7C}"}}
+	testStatusCode("TestRoutePlannerV3_1GisRouteResponseXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1GisRoute, XML, apiParams, "response", `<GisRoute`)
+}
+
+/*
  * Route-planner v3.1 Trip
  */
 
