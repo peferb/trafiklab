@@ -23,3 +23,10 @@ _Just my own notes..._
 * [Jack Lindamoods article "aspects of a good go library"](https://medium.com/@cep21/aspects-of-a-good-go-library-7082beabb403)
 * [Is ExpVar intersting in some case?](https://sysdig.com/blog/golang-expvar-custom-metrics/)
 * [Go Proverbs with Rob Pike @ Youtube](https://youtu.be/PAAkCSZUG1c)
+
+## Stuff I keep forgetting
+
+Run specific test by test func name:
+```go
+go test ./... -run TestRoutePlannerV3_1GisRouteResponseXml
+```
