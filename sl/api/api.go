@@ -17,7 +17,7 @@ const JSON = "json"
 // XML Dataformat
 const XML = "xml"
 
-// RoutePlannerV3_1Trip "Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
+// RoutePlannerV3_1Trip Trip part of "Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
 //
 // Access
 // https://developer.trafiklab.se/api/sl-reseplanerare-31
@@ -25,6 +25,15 @@ const XML = "xml"
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/route-planner-31/
 const RoutePlannerV3_1Trip = "api.sl.se/api2/TravelplannerV3_1/trip"
+
+// RoutePlannerV3_1JourneyDetail Journey Detail part of"Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
+//
+// Access
+// https://developer.trafiklab.se/api/sl-reseplanerare-31
+//
+// Documentation
+// https://www.trafiklab.se/api/trafiklab-apis/sl/route-planner-31/
+const RoutePlannerV3_1JourneyDetail = "api.sl.se/api2/TravelplannerV3_1/journeydetail"
 
 // RealTimeDeparturesV4 "Realtime Departures V4 (Realtidsinformation 4)"
 //
