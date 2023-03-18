@@ -105,9 +105,3 @@ func main() {
 ### SL Nearby stops v2.0 (Närliggande hållplatser 2)
 * [Generate API key](https://developer.trafiklab.se/api/sl-narliggande-hallplatser-2)
 * [API Specification](https://www.trafiklab.se/api/trafiklab-apis/sl/nearby-stops-2/)
-
-## TODO
-_Nothing to see here ;)_
-* Move protocol (https) from API Type url:s to formatter
-* Add support for "SL Route-planner v3.1" in its own package (because it breaks overall structure)
-* Option to get data as structs 
