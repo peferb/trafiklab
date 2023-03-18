@@ -80,6 +80,46 @@ func testStatusCode(testName string, t *testing.T, envVar string, api string, fo
 }
 
 /*
+ * Route-planner v3.1 Trip
+ */
+
+// TestRoutePlannerV3_1TripStringJson tries to fetch Trip data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TripStringJson(t *testing.T) {
+	apiParams := url.Values{"originExtId": {"9710"}, "destExtId": {"9001"}, "lang": {"en"}}
+	testStatusCode("TestRoutePlannerV3_1TripStringJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Trip, JSON, apiParams, "string", `"Trip":`)
+}
+
+// TestRoutePlannerV3_1TripStringXml tries to fetch Trip data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TripStringXml(t *testing.T) {
+	apiParams := url.Values{"originExtId": {"9710"}, "destExtId": {"9001"}, "lang": {"en"}}
+	testStatusCode("TestRoutePlannerV3_1TripStringXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Trip, XML, apiParams, "string", `<TripList`)
+}
+
+// TestRoutePlannerV3_1TripBytesJson tries to fetch Trip data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TripBytesJson(t *testing.T) {
+	apiParams := url.Values{"originExtId": {"9710"}, "destExtId": {"9001"}, "lang": {"en"}}
+	testStatusCode("TestRoutePlannerV3_1TripBytesJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Trip, JSON, apiParams, "bytes", `"Trip":`)
+}
+
+// TestRoutePlannerV3_1TripBytesXml tries to fetch data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TripBytesXml(t *testing.T) {
+	apiParams := url.Values{"originExtId": {"9710"}, "destExtId": {"9001"}, "lang": {"en"}}
+	testStatusCode("TestRoutePlannerV3_1TripBytesXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Trip, XML, apiParams, "bytes", `<TripList`)
+}
+
+// TestRoutePlannerV3_1TripResponseJson tries to fetch data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TripResponseJson(t *testing.T) {
+	apiParams := url.Values{"originExtId": {"9710"}, "destExtId": {"9001"}, "lang": {"en"}}
+	testStatusCode("TestRoutePlannerV3_1TripResponseJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Trip, JSON, apiParams, "response", `"Trip":`)
+}
+
+// TestRoutePlannerV3_1TripResponseXml tries to fetch data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TripResponseXml(t *testing.T) {
+	apiParams := url.Values{"originExtId": {"9710"}, "destExtId": {"9001"}, "lang": {"en"}}
+	testStatusCode("TestRoutePlannerV3_1TripResponseXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Trip, XML, apiParams, "response", `<TripList`)
+}
+
+/*
  * RealTimeDeparturesV4
  */
 
