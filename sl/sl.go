@@ -9,7 +9,7 @@ import (
 )
 
 func NewApi(apiType string, dataFormat string, apiKey string) Api {
-	apiUrl := fmt.Sprintf("%s.%s", apiType, dataFormat)
+	apiUrl := fmt.Sprintf("https://%s.%s", apiType, dataFormat)
 
 	return Api{
 		GetBytes: func(query url.Values) ([]byte, error) {

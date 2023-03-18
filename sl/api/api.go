@@ -24,7 +24,7 @@ const XML = "xml"
 //
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/departures-4/
-const RealTimeDeparturesV4 = "https://api.sl.se/api2/realtimedeparturesV4"
+const RealTimeDeparturesV4 = "api.sl.se/api2/realtimedeparturesV4"
 
 // ServiceAlertsV2 "SL Stop lookup v1.0 AKA deviations (Platsuppslag)"
 //
@@ -33,7 +33,7 @@ const RealTimeDeparturesV4 = "https://api.sl.se/api2/realtimedeparturesV4"
 //
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/stop-lookup/
-const ServiceAlertsV2 = "https://api.sl.se/api2/deviations"
+const ServiceAlertsV2 = "api.sl.se/api2/deviations"
 
 // StopLookupV1 "SL Stop lookup v1.0 AKA TypeAhead (Platsuppslag)"
 //
@@ -42,7 +42,7 @@ const ServiceAlertsV2 = "https://api.sl.se/api2/deviations"
 //
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/stop-lookup/
-const StopLookupV1 = "https://api.sl.se/api2/typeahead"
+const StopLookupV1 = "api.sl.se/api2/typeahead"
 
 // TrafficStatusV2 "SL Traffic status v2.0 AKA Traffic Situation (SL Trafikläget 2)"
 //
@@ -51,7 +51,7 @@ const StopLookupV1 = "https://api.sl.se/api2/typeahead"
 //
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/sl-traffic-status-2/
-const TrafficStatusV2 = "https://api.sl.se/api2/trafficsituation"
+const TrafficStatusV2 = "api.sl.se/api2/trafficsituation"
 
 // StopsAndLinesV2 "SL Stops and lines v2.0 AKA LineData (SL Hållplatser och Linjer 2)"
 //
@@ -60,7 +60,7 @@ const TrafficStatusV2 = "https://api.sl.se/api2/trafficsituation"
 //
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/stops-and-lines-2/
-const StopsAndLinesV2 = "https://api.sl.se/api2/LineData"
+const StopsAndLinesV2 = "api.sl.se/api2/LineData"
 
 // NearbyStopsV2 "SL Nearby stops v2.0 (Närliggande hållplatser 2)"
 //
@@ -69,4 +69,4 @@ const StopsAndLinesV2 = "https://api.sl.se/api2/LineData"
 //
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/nearby-stops-2/
-const NearbyStopsV2 = "https://api.sl.se/api2/nearbystopsv2"
+const NearbyStopsV2 = "api.sl.se/api2/nearbystopsv2"
