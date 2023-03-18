@@ -7,6 +7,7 @@ _Just my own notes..._
 * Add func that takes a Writer as parameter? (for less GC...)
   * Does Writer interface allows HttpWriters to be passed?
 * Option to get data as structs (?)
+* Use [golangci-lint](https://golangci-lint.run/) (?)
 
 ## Links
 * [Trafiklab login](https://developer.trafiklab.se/user/login)
