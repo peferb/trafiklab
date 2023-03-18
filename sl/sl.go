@@ -8,25 +8,24 @@ import (
 	"net/url"
 )
 
-func NewApi(apiType string, dataFormat string, apiKey string) struct{ Api } {
+func NewApi(apiType string, dataFormat string, apiKey string) Api {
 	apiUrl := fmt.Sprintf("%s.%s", apiType, dataFormat)
 
-	api := struct{ Api }{}
-	api.GetBytes = func(query url.Values) ([]byte, error) {
-		return getBytes(apiKey, query, apiUrl)
+	return Api{
+		GetBytes: func(query url.Values) ([]byte, error) {
+			return getBytes(apiKey, query, apiUrl)
+		},
+		GetString: func(query url.Values) (string, error) {
+			bytes, err := getBytes(apiKey, query, apiUrl)
+			if err != nil {
+				return "", err
+			}
+			return string(bytes), nil
+		},
+		GetResponse: func(query url.Values) (*http.Response, error) {
+			return getResponse(apiKey, query, apiUrl)
+		},
 	}
-	api.GetString = func(query url.Values) (string, error) {
-		bytes, err := getBytes(apiKey, query, apiUrl)
-		if err != nil {
-			return "", err
-		}
-		return string(bytes), nil
-	}
-	api.GetResponse = func(query url.Values) (*http.Response, error) {
-		return getResponse(apiKey, query, apiUrl)
-	}
-
-	return api
 }
 
 func getResponse(apiKey string, query url.Values, apiUrl string) (*http.Response, error) {
