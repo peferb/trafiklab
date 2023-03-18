@@ -1,6 +1,17 @@
 # peferb/trafiklab changelog
 
-## v0.2.1
+## v.0.2.3
+### Changed all parameters to stlib types
+Now DataFormat type and "Api" Type is replaced by regular strings.
+
+I came to his decision after reading [Jack Lindamoods article "Aspects of a good Go library"](https://medium.com/@cep21/aspects-of-a-good-go-library-7082beabb403).
+
+### NewApi returns Api...
+... and not Struct{Api} as before. Don't even know what Struct{Api} is. The previous return type was the result of a 
+late late night in a new lang 😅
+
+## v0.2.1 / v0.2.2
+_(duplicated version because of me messing things up)_
 
 ### Breaking changes
 * Replaced the package import usage with `sl.NewApi()`.

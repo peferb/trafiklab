@@ -1,5 +1,5 @@
 # peferb/trafiklab 
-#### _github.com/peferb/trafiklab@v0.2.2 ([changelog](https://github.com/peferb/trafiklab/blob/main/CHANGELOG.md))_
+#### _github.com/peferb/trafiklab@v0.2.3 ([changelog](https://github.com/peferb/trafiklab/blob/main/CHANGELOG.md))_
 
 Golang wrapper of [Trafiklab.se](https://trafiklab.se/) which supplies traffic information about Swedish trains, buses, trams and ships.
 
