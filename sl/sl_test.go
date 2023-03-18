@@ -22,7 +22,7 @@ func getEnvVar(envKey string, t *testing.T) string {
 	return apiKey
 }
 
-func testStatusCode(testName string, t *testing.T, envVar string, api Type, format DataFormat, apiParams url.Values, resType string, shouldContain string) {
+func testStatusCode(testName string, t *testing.T, envVar string, api string, format string, apiParams url.Values, resType string, shouldContain string) {
 	apiKey := getEnvVar(envVar, t)
 	departures := NewApi(api, format, apiKey)
 	if resType == "string" {

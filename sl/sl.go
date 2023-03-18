@@ -8,7 +8,7 @@ import (
 	"net/url"
 )
 
-func NewApi(apiType Type, dataFormat DataFormat, apiKey string) struct{ Api } {
+func NewApi(apiType string, dataFormat string, apiKey string) struct{ Api } {
 	apiUrl := fmt.Sprintf("%s.%s", apiType, dataFormat)
 
 	api := struct{ Api }{}
