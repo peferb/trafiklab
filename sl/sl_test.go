@@ -24,12 +24,12 @@ func getEnvVar(envKey string, t *testing.T) string {
 
 func testStatusCode(testName string, t *testing.T, envVar string, api string, format string, apiParams url.Values, resType string, shouldContain string) {
 	apiKey := getEnvVar(envVar, t)
-	departures := NewApi(api, format, apiKey)
+	slApi := NewApi(api, format, apiKey)
 	if resType == "string" {
-		data, err := departures.GetString(apiParams)
+		data, err := slApi.GetString(apiParams)
 		if err != nil || !strings.Contains(data, shouldContain) {
 			t.Fatalf(
-				`%s %v key = "%s" exptected to contain "%s", got: data = %s, error = %s`,
+				`%s format="%v" key="%s" exptected to contain "%s", got: data = %s, error = %s`,
 				testName,
 				format,
 				apiKey,
@@ -39,7 +39,7 @@ func testStatusCode(testName string, t *testing.T, envVar string, api string, fo
 			)
 		}
 	} else if resType == "bytes" {
-		data, err := departures.GetBytes(apiParams)
+		data, err := slApi.GetBytes(apiParams)
 		if err != nil || !strings.Contains(string(data), shouldContain) {
 			t.Fatalf(
 				`%s %v key = "%s" exptected to contain "%s", got: data = %s, error = %s`,
@@ -52,7 +52,7 @@ func testStatusCode(testName string, t *testing.T, envVar string, api string, fo
 			)
 		}
 	} else if resType == "response" {
-		res, err := departures.GetResponse(apiParams)
+		res, err := slApi.GetResponse(apiParams)
 		if res.StatusCode != 200 || err != nil {
 			t.Fatalf("%s not 200, response='%v', error='%s'", testName, res, err.Error())
 		}
