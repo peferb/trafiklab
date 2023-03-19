@@ -221,19 +221,19 @@ func TestRoutePlannerV3_1JourneyDetailBytesJson(t *testing.T) {
 	testStatusCode("TestRoutePlannerV3_1JourneyDetailBytesJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1JourneyDetail, JSON, apiParams, "bytes", `"Stops":`)
 }
 
-// TestRoutePlannerV3_1JourneyDetailBytesXml tries to fetch data from RoutePlannerV3_1 API
+// TestRoutePlannerV3_1JourneyDetailBytesXml tries to fetch Journey Detail data from RoutePlannerV3_1 API
 func TestRoutePlannerV3_1JourneyDetailBytesXml(t *testing.T) {
 	apiParams := url.Values{"id": {"1|14536|1|74|18032023"}}
 	testStatusCode("TestRoutePlannerV3_1JourneyDetailBytesXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1JourneyDetail, XML, apiParams, "bytes", `<Stops>`)
 }
 
-// TestRoutePlannerV3_1JourneyDetailResponseJson tries to fetch data from RoutePlannerV3_1 API
+// TestRoutePlannerV3_1JourneyDetailResponseJson tries to fetch Journey Detail data from RoutePlannerV3_1 API
 func TestRoutePlannerV3_1JourneyDetailResponseJson(t *testing.T) {
 	apiParams := url.Values{"id": {"1|14536|1|74|18032023"}}
 	testStatusCode("TestRoutePlannerV3_1JourneyDetailResponseJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1JourneyDetail, JSON, apiParams, "response", `"Stops":`)
 }
 
-// TestRoutePlannerV3_1JourneyDetailResponseXml tries to fetch data from RoutePlannerV3_1 API
+// TestRoutePlannerV3_1JourneyDetailResponseXml tries to fetch Journey Detail data from RoutePlannerV3_1 API
 func TestRoutePlannerV3_1JourneyDetailResponseXml(t *testing.T) {
 	apiParams := url.Values{"id": {"1|14536|1|74|18032023"}}
 	testStatusCode("TestRoutePlannerV3_1JourneyDetailResponseXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1JourneyDetail, XML, apiParams, "response", `<Stops>`)
