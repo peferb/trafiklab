@@ -17,7 +17,7 @@ const JSON = "json"
 // XML Dataformat
 const XML = "xml"
 
-// RoutePlannerV3_1Xsd Returns all response types of "Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
+// RoutePlannerV3_1TtiXml Returns available dates for searches in "Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
 //
 // -> ALWAYS RETURNS XML <-
 //
@@ -26,7 +26,18 @@ const XML = "xml"
 //
 // Documentation
 // https://www.trafiklab.se/api/trafiklab-apis/sl/route-planner-31/
-const RoutePlannerV3_1Xsd = "api.sl.se/api2/TravelplannerV3_1/xsd"
+const RoutePlannerV3_1TtiXml = "api.sl.se/api2/TravelplannerV3_1/tti"
+
+// RoutePlannerV3_1XsdXml Returns all response types of "Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
+//
+// -> ALWAYS RETURNS XML <-
+//
+// Access
+// https://developer.trafiklab.se/api/sl-reseplanerare-31
+//
+// Documentation
+// https://www.trafiklab.se/api/trafiklab-apis/sl/route-planner-31/
+const RoutePlannerV3_1XsdXml = "api.sl.se/api2/TravelplannerV3_1/xsd"
 
 // RoutePlannerV3_1Trip Trip part of "Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)"
 //

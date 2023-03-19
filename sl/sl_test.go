@@ -117,40 +117,44 @@ func TestRoutePlannerV3_1GisRouteResponseJson(t *testing.T) {
  * Route-planner v3.1 XSD
  */
 
-// TestRoutePlannerV3_1XsdStringJson tries to fetch XSD data from RoutePlannerV3_1 API
-func TestRoutePlannerV3_1XsdStringJson(t *testing.T) {
-	apiParams := url.Values{}
-	testStatusCode("TestRoutePlannerV3_1XsdStringJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Xsd, JSON, apiParams, "string", `<xs:annotation><xs:documentation>`)
-}
-
 // TestRoutePlannerV3_1XsdStringXml tries to fetch XSD data from RoutePlannerV3_1 API
 func TestRoutePlannerV3_1XsdStringXml(t *testing.T) {
 	apiParams := url.Values{}
-	testStatusCode("TestRoutePlannerV3_1XsdStringXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Xsd, XML, apiParams, "string", `<xs:annotation><xs:documentation>`)
-}
-
-// TestRoutePlannerV3_1XsdBytesJson tries to fetch XSD data from RoutePlannerV3_1 API
-func TestRoutePlannerV3_1XsdBytesJson(t *testing.T) {
-	apiParams := url.Values{}
-	testStatusCode("TestRoutePlannerV3_1XsdBytesJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Xsd, JSON, apiParams, "bytes", `<xs:annotation><xs:documentation>`)
+	testStatusCode("TestRoutePlannerV3_1XsdStringXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1XsdXml, XML, apiParams, "string", `<xs:annotation><xs:documentation>`)
 }
 
 // TestRoutePlannerV3_1XsdBytesXml tries to fetch XSD data from RoutePlannerV3_1 API
 func TestRoutePlannerV3_1XsdBytesXml(t *testing.T) {
 	apiParams := url.Values{}
-	testStatusCode("TestRoutePlannerV3_1XsdBytesXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Xsd, XML, apiParams, "bytes", `<xs:annotation><xs:documentation>`)
-}
-
-// TestRoutePlannerV3_1XsdResponseJson tries to fetch XSD data from RoutePlannerV3_1 API
-func TestRoutePlannerV3_1XsdResponseJson(t *testing.T) {
-	apiParams := url.Values{}
-	testStatusCode("TestRoutePlannerV3_1XsdResponseJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Xsd, JSON, apiParams, "response", `<xs:annotation><xs:documentation>`)
+	testStatusCode("TestRoutePlannerV3_1XsdBytesXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1XsdXml, XML, apiParams, "bytes", `<xs:annotation><xs:documentation>`)
 }
 
 // TestRoutePlannerV3_1XsdResponseXml tries to fetch XSD data from RoutePlannerV3_1 API
 func TestRoutePlannerV3_1XsdResponseXml(t *testing.T) {
 	apiParams := url.Values{}
-	testStatusCode("TestRoutePlannerV3_1XsdResponseXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Xsd, XML, apiParams, "response", `<xs:annotation><xs:documentation>`)
+	testStatusCode("TestRoutePlannerV3_1XsdResponseXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1XsdXml, XML, apiParams, "response", `<xs:annotation><xs:documentation>`)
+}
+
+/*
+ * Route-planner v3.1 TTI
+ */
+
+// TestRoutePlannerV3_1TtiStringXml tries to fetch TTI data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TtiStringXml(t *testing.T) {
+	apiParams := url.Values{}
+	testStatusCode("TestRoutePlannerV3_1TtiStringXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1TtiXml, XML, apiParams, "string", `<TimetableInfoList`)
+}
+
+// TestRoutePlannerV3_1TtiBytesXml tries to fetch TTI data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TtiBytesXml(t *testing.T) {
+	apiParams := url.Values{}
+	testStatusCode("TestRoutePlannerV3_1TtiBytesXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1TtiXml, XML, apiParams, "bytes", `<TimetableInfoList`)
+}
+
+// TestRoutePlannerV3_1TtiResponseXml tries to fetch TTI data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1TtiResponseXml(t *testing.T) {
+	apiParams := url.Values{}
+	testStatusCode("TestRoutePlannerV3_1TtiResponseXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1TtiXml, XML, apiParams, "response", `<TimetableInfoList`)
 }
 
 /*
