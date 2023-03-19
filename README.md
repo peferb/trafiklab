@@ -107,7 +107,7 @@ func main() {
 * [API Documentation](https://www.trafiklab.se/api/trafiklab-apis/sl/nearby-stops-2/)
 
 ### SL Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)
-⚠️ _"Route Planner V3.1" differs a bit from the other API:s by having multiple endpoints and which of two of them only 
-return data in XML format_
+⚠️ _"Route Planner V3.1" differs a bit from the other API:s by having multiple endpoints, and two of them only return 
+data in XML format._
 * [Generate API key](https://developer.trafiklab.se/api/sl-reseplanerare-31)
 * [API Documentation](https://www.trafiklab.se/api/trafiklab-apis/sl/route-planner-31/)
