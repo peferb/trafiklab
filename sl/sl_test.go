@@ -120,6 +120,46 @@ func TestRoutePlannerV3_1GisRouteResponseXml(t *testing.T) {
 }
 
 /*
+ * Route-planner v3.1 Reconstruction
+ */
+
+// TestRoutePlannerV3_1ReconstructionStringJson tries to fetch Reconstruction data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1ReconstructionStringJson(t *testing.T) {
+	apiParams := url.Values{"ctx": {"T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24"}}
+	testStatusCode("TestRoutePlannerV3_1ReconstructionStringJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Reconstruction, JSON, apiParams, "string", `"Trip":[`)
+}
+
+// TestRoutePlannerV3_1ReconstructionStringXml tries to fetch Reconstruction data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1ReconstructionStringXml(t *testing.T) {
+	apiParams := url.Values{"ctx": {"T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24"}}
+	testStatusCode("TestRoutePlannerV3_1ReconstructionStringXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Reconstruction, XML, apiParams, "string", `<TripList`)
+}
+
+// TestRoutePlannerV3_1ReconstructionBytesJson tries to fetch Reconstruction data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1ReconstructionBytesJson(t *testing.T) {
+	apiParams := url.Values{"ctx": {"T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24"}}
+	testStatusCode("TestRoutePlannerV3_1ReconstructionBytesJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Reconstruction, JSON, apiParams, "bytes", `"Trip":[`)
+}
+
+// TestRoutePlannerV3_1ReconstructionBytesXml tries to fetch Reconstruction data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1ReconstructionBytesXml(t *testing.T) {
+	apiParams := url.Values{"ctx": {"T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24"}}
+	testStatusCode("TestRoutePlannerV3_1ReconstructionBytesXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Reconstruction, XML, apiParams, "bytes", `<TripList`)
+}
+
+// TestRoutePlannerV3_1ReconstructionResponseJson tries to fetch Reconstruction data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1ReconstructionResponseJson(t *testing.T) {
+	apiParams := url.Values{"ctx": {"T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24"}}
+	testStatusCode("TestRoutePlannerV3_1ReconstructionResponseJson", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Reconstruction, JSON, apiParams, "response", `"Trip":[`)
+}
+
+// TestRoutePlannerV3_1ReconstructionResponseXml tries to fetch Reconstruction data from RoutePlannerV3_1 API
+func TestRoutePlannerV3_1ReconstructionResponseXml(t *testing.T) {
+	apiParams := url.Values{"ctx": {"T%24A%3D1%40O%3DT-Centralen%40L%3D400101052%40a%3D128%40%24A%3D1%40O%3DSlussen%40L%3D400101012%40a%3D128%40%24201706140859%24201706140902%24%20%24"}}
+	testStatusCode("TestRoutePlannerV3_1ReconstructionResponseXml", t, "SL_ROUTE_PLANNER_V3_1", RoutePlannerV3_1Reconstruction, XML, apiParams, "response", `<TripList`)
+}
+
+/*
  * Route-planner v3.1 Trip
  */
 
