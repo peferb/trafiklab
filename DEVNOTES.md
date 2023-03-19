@@ -3,7 +3,6 @@
 _Just my own notes..._
 
 ## TODO
-* Add support for "SL Route-planner v3.1" (in its own package to match api:s structure?)
 * Make Api implement [Stringer interface](https://pkg.go.dev/fmt#Stringer)
 * [Support debuging](https://medium.com/@cep21/go-1-7-httptrace-and-context-debug-patterns-608ae887224a) (?)
 * Add func that takes a Writer as parameter? (for less GC...)

@@ -1,5 +1,16 @@
 # peferb/trafiklab changelog
 
+## v0.2.4
+### Route Planner V3.1 AKA Travel Planner V3.1 (SL Reseplanerare 3.1)
+
+Added support for [Route Planner V3.1](https://www.trafiklab.se/api/trafiklab-apis/sl/route-planner-31/). But it's not a 
+pretty implementation because Route Planner API breaks the general SL API structure.
+
+#### How does Route Planner V3.1 diff against the other API:s?
+* All other API:s consists of one endpoint per API. Route Planner V3.1 consists of multiple endpoints. 
+* All other API:s offers JSON as data return format. In Route Planner two of the endpoints only returns XML, I have 
+suffixed those with "Xml".
+
 ## v.0.2.3
 ### Changed all parameters to stlib types
 Now DataFormat type and "Api" Type is replaced by regular strings.
