@@ -11,6 +11,9 @@ easy to use.
 $ go get github.com/peferb/trafiklab@v0.2.4
 ```
 
+![i-like-trains](https://github.com/user-attachments/assets/7c227f60-8995-4b58-a6b3-d7e2bfbc3d86)
+
+
 ## CLI example
 
 ```go
